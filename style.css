@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: hsl(235, 21%, 11%);
+    overflow: hidden;
+}
+
+header {
+    min-height: 35%;
+    background-image: url("/images/bg-desktop-dark.jpg");
+    background-size: cover;
+}
+
+.header {
+    justify-content: space-between;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 1rem;
+    background-color: transparent !important;
+}
+
+.container {
+    width: 35%;
+    height: 80%;
+    background: transparent;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    div{
+        width: 100%;
+        padding: 1rem;
+        background: hsl(235, 24%, 19%);
+        display: flex;
+        gap: 1rem;
+        border-radius: 5px;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        color: whitesmoke;
+    }
+
+    input[type="text"]:focus-within {
+        outline: none;
+    }
+
+    .checkbox {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: 1px solid grey;
+    }
+
+    .checkbox:hover{
+        box-shadow: inset -2px 0px 0px hsl(192,100%,67%),inset 2px 0px 1px hsl(280,87%,65%);
+    }
+
+    .footer {
+        color: grey;
+        button {
+            border: none;
+            background-color: transparent;
+            color: grey;
+        }
+
+        button:hover{
+            color: hsl(234, 39%, 85%);
+        }
+        
+        button:active{
+            color: hsl(220, 98%, 61%);
+        }
+
+        div{
+            padding: 0;
+        }
+    }
+}
+
+.clear{
+    width: 100%;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+ul{
+    border-radius: 5px;
+}
+
+li {
+    width: 100%;
+    padding: 1.5rem 0;
+    background: hsl(235, 24%, 19%);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid grey;
+    color: hsl(234, 39%, 85%);
+}
+
+li:hover{
+    color: hsl(236, 33%, 92%);
+}
+
+:has(>input[type="checkbox"]:checked) img{
+    display: block;
+}
+
+:has(>input[type="checkbox"]:checked) label{
+    background: linear-gradient(hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+}
+
+:has(>input[type="checkbox"]:checked) p{
+    text-decoration: line-through;
+}
+
+label img{
+    display: none;
+}
+
+label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
